@@ -27,7 +27,7 @@ void loop() {
   uint8_t from;
 
   if (manager.recvfromAck(buf, &len, &from)) { // reciever code line    
-    String receivedData = (char*)buf;
+    String receivedData = (char*)buf;//recieved data is stored in variable buf
     Serial.println("Received data from Node " + String(from) + ": " + receivedData);
 
     // Process the received data
